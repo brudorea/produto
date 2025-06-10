@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\bruno.hdlima\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+516507114.index
+1504024370.index
+2419533675.index
+3806381224.index
+580586740.index
+2792075081.index
+3919496622.index

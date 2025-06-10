@@ -1,0 +1,219 @@
+package controller;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Locale;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.DAO; // Classe do banco de dados
+import model.JavaBeans;
+
+/**
+ * Servlet implementation class Controller
+ */
+@WebServlet(urlPatterns = { "/main", "/insert", "/select", "/update", "/delete" })
+
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	DAO dao = new DAO(); // Testar o banco de dados
+	JavaBeans produto = new JavaBeans();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Controller() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// dao.testeConexao(); // Fazer teste com o banco de dados
+
+		String action = request.getServletPath();
+		System.out.println(action);
+
+		if (action.equals("/main")) {
+			produtos(request, response);
+		} else if (action.equals("/insert")) {
+			novoProduto(request, response);
+		} else if (action.equals("/select")) {
+			listarProduto(request, response);
+		} else if (action.equals("/update")) {
+			editarProduto(request, response);
+		} else if (action.equals("/delete")) {
+			removerProduto(request, response);
+		} else {
+			response.sendRedirect("index.html");
+		}
+	}
+
+	// produtos
+	protected void produtos(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		// response.sendRedirect("cadastro.jsp");
+
+		// Criando um objeto que irá listar os dados JavaBeans
+		ArrayList<JavaBeans> lista = dao.listarProdutos();
+
+		// Encaminhar a lista ao documento cadastro.jsp
+		request.setAttribute("produtos", lista);
+		RequestDispatcher rd = request.getRequestDispatcher("cadastro.jsp");
+		rd.forward(request, response);
+
+		/**
+		 * // Teste de recebimento da lista for (int i = 0; i < lista.size(); i++) {
+		 * System.out.println(lista.get(i).getId());
+		 * System.out.println(lista.get(i).getNome());
+		 * System.out.println(lista.get(i).getQtde());
+		 * System.out.println(lista.get(i).getValor_unit());
+		 * System.out.println(lista.get(i).getData_cad());
+		 * 
+		 * }
+		 **/
+	}
+
+	// novoProduto
+	protected void novoProduto(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		/*
+		 * // Teste de recebimento dos dados do formulário
+		 * System.out.println(request.getParameter("nome_produto"));
+		 * System.out.println(request.getParameter("qtde"));
+		 * System.out.println(request.getParameter("valorunit"));
+		 * System.out.println(request.getParameter("data_cad"));
+		 */
+
+		// Setar as variáveis
+		int qtde = Integer.parseInt(request.getParameter("qtde"));
+		String valorUnitStr = request.getParameter("valorunit").replace(",", ".");
+		float valorUnit = Float.parseFloat(valorUnitStr);
+		String dataTexto = request.getParameter("data_cad");
+		LocalDate data = LocalDate.parse(dataTexto);
+
+		produto.setNome(request.getParameter("nome_produto"));
+		produto.setQtde(qtde);
+		produto.setValor_unit(valorUnit);
+		produto.setData_cad(data);
+
+		dao.inserirProduto(produto);
+
+		// Redirecionar para o documento "cadastro.jsp"
+		response.sendRedirect("main");
+
+	}
+
+	protected void listarProduto(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		
+		/**
+		//Teste de Recebimento
+		System.out.println(id);
+		*/
+		
+		//Setar variável JavaBeans - utilizando objeto produto
+		produto.setId(id);
+		
+		dao.selecionarProduto(produto);
+		
+		/**
+		//Teste de Recebimento 
+		System.out.println(produto.getId());
+		System.out.println(produto.getNome());
+		System.out.println(produto.getQtde());
+		System.out.println(produto.getValor_unit());
+		System.out.println(produto.getData_cad());
+		*/
+		
+		NumberFormat formato = 
+        NumberFormat.getCurrencyInstance(Locale.forLanguageTag("pt-BR"));
+		String valorFormatado = formato.format(produto.getValor_unit());
+		
+		//Setar as variáveis JavaBeans
+		request.setAttribute("id", produto.getId());
+		request.setAttribute("nome", produto.getNome());
+		request.setAttribute("qtde", produto.getQtde());
+		request.setAttribute("valorunit", valorFormatado); //R$ 12,45
+		request.setAttribute("data_cadastro", produto.getData_cad());
+		
+		//Despachar para editar.jps
+		RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
+		rd.forward (request,response);
+	}
+	
+	protected void editarProduto(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		/**
+		//Teste de Recimento
+		System.out.println(request.getParameter("id"));
+		System.out.println(request.getParameter("nome_produto"));
+		System.out.println(request.getParameter("qtde"));
+		System.out.println(request.getParameter("valorunit"));
+		System.out.println(request.getParameter("data_cad"));
+		*/
+		
+		//Setar as variáveis JavaBeans
+		try {
+			//Obter parâmetros básicos
+			int id = Integer.parseInt(request.getParameter("id"));
+			String nome = request.getParameter("nome_produto");
+			int qtde = Integer.parseInt(request.getParameter("qtde"));
+			
+			//Valor monetário
+			String valorTexto = request.getParameter("valorunit");
+			//Remover espaços
+			valorTexto = valorTexto.replaceAll("[\\s\\u00A0]", "");
+			//Remover R$
+			valorTexto = valorTexto.replace("R$", "");
+			//Substituir vírgula por ponto
+			valorTexto = valorTexto.replace(",", ".");
+			//Converter FLOAT
+			float valorUnit = Float.parseFloat(valorTexto);
+			
+			//Converter data
+			LocalDate datacadastro = LocalDate.parse(request.getParameter("data_cad"));
+			
+			produto.setId(id);
+			produto.setNome(nome);
+			produto.setQtde(qtde);
+			produto.setValor_unit(valorUnit);
+			produto.setData_cad(datacadastro);
+			
+			//Executar update
+			dao.alterarProduto(produto);
+					
+			
+		} catch (Exception e) {
+			//Em caso de erro, adiciona um redirecionamento para uma página de erro
+			System.err.println("Erro ao editar produto:" + e.getMessage());
+		}
+		
+		//Redirecionar para cadastro.jsp
+		response.sendRedirect("main");
+	}
+	
+	protected void removerProduto(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String id = request.getParameter("id");
+		
+		//Teste de recebimento
+		System.out.println(id);	
+	}				
+	
+}

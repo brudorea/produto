@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Mon Jun 09 21:05:22 BRT 2025
+org.eclipse.jst.jee.server\:Hello\ JSP=C\:\\Users\\bruno.hdlima\\workspace\\apache-tomcat-10.1.40\\wtpwebapps\\Hello JSP
+org.eclipse.jst.jee.server\:Hello\ Servlet=C\:\\Users\\bruno.hdlima\\workspace\\apache-tomcat-10.1.40\\wtpwebapps\\Hello Servlet
+org.eclipse.jst.jee.server\:Hello\ World=C\:\\Users\\bruno.hdlima\\workspace\\apache-tomcat-10.1.40\\wtpwebapps\\Hello World
+org.eclipse.jst.jee.server\:produto=C\:\\Users\\bruno.hdlima\\workspace\\apache-tomcat-10.1.40\\wtpwebapps\\produto

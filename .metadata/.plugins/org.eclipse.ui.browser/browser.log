@@ -1,0 +1,123 @@
+
+mai. 12, 2025 19:30:08.77 NEW SESSION
+mai. 12, 2025 19:30:08.78 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 12, 2025 19:30:41.10 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 12, 2025 19:41:38.67 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 12, 2025 19:42:11.91 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 12, 2025 19:53:04.95 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 12, 2025 19:53:38.18 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+mai. 19, 2025 20:23:02.99 NEW SESSION
+mai. 19, 2025 20:23:03.00 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:23:28.36 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:23:34.75 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 19, 2025 20:34:25.31 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:34:28.09 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 19, 2025 20:34:43.70 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:35:16.96 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 19, 2025 20:38:55.01 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:46:09.82 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:46:41.65 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 19, 2025 20:53:21.80 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:54:32.67 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:54:35.43 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+mai. 19, 2025 20:55:48.85 NEW SESSION
+mai. 19, 2025 20:55:48.87 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 20:57:20.74 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 19, 2025 22:22:20.14 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+mai. 21, 2025 19:33:21.29 NEW SESSION
+mai. 21, 2025 19:33:21.31 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 21, 2025 19:38:03.68 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 21, 2025 19:38:32.01 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 21, 2025 19:40:47.45 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 21, 2025 19:42:23.55 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+mai. 26, 2025 20:10:50.91 NEW SESSION
+mai. 26, 2025 20:10:50.92 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 26, 2025 20:11:47.42 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 26, 2025 20:12:19.70 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 26, 2025 20:46:56.40 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 26, 2025 20:47:04.78 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 26, 2025 20:47:37.26 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+mai. 28, 2025 19:27:31.04 NEW SESSION
+mai. 28, 2025 19:27:31.05 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 19:28:40.48 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 19:29:13.47 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 19:35:00.20 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 19:36:00.47 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 19:36:31.72 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+mai. 28, 2025 19:54:36.36 NEW SESSION
+mai. 28, 2025 19:54:36.38 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 19:55:09.26 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 19:57:39.86 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 19:58:11.40 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 20:17:32.80 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 20:18:05.50 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 20:52:01.09 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 20:52:34.32 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 20:52:54.29 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 20:53:26.79 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 20:56:31.30 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 20:57:04.04 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+mai. 28, 2025 21:01:29.32 Created TensorFlow Lite XNNPACK delegate for CPU.
+mai. 28, 2025 21:02:02.59 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+jun. 02, 2025 20:11:34.00 NEW SESSION
+jun. 02, 2025 20:11:34.00 [2800:5504:0602/201133.998:ERROR:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:179] Client is missing for kUser scope
+jun. 02, 2025 20:11:34.29 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+jun. 02, 2025 20:11:34.29 I0000 00:00:1748905894.290219    8624 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+jun. 02, 2025 20:11:34.57 [2800:8232:0602/201134.576:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 20:11:35.41 Created TensorFlow Lite XNNPACK delegate for CPU.
+jun. 02, 2025 20:12:04.26 [2800:8232:0602/201204.264:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 20:12:06.81 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+jun. 02, 2025 20:12:57.60 [2800:8232:0602/201257.605:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 20:14:29.41 [2800:8232:0602/201429.411:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 20:17:55.25 [2800:8232:0602/201755.251:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 20:24:03.61 [2800:8232:0602/202403.617:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 21:46:24.25 [2476:16564:0602/214624.252:ERROR:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:179] Client is missing for kUser scope
+jun. 02, 2025 21:46:24.36 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+jun. 02, 2025 21:46:24.37 I0000 00:00:1748911584.363446    2388 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+jun. 02, 2025 21:46:24.56 Created TensorFlow Lite XNNPACK delegate for CPU.
+jun. 02, 2025 21:46:24.60 [2476:7324:0602/214624.608:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 21:46:45.85 [2476:7324:0602/214645.853:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 21:46:57.54 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+jun. 02, 2025 21:47:26.76 [2476:7324:0602/214726.759:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 21:49:03.01 [2476:7324:0602/214903.013:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 21:51:59.00 [2476:7324:0602/215159.003:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 22:12:59.70 [9332:12764:0602/221259.706:ERROR:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:179] Client is missing for kUser scope
+jun. 02, 2025 22:12:59.79 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+jun. 02, 2025 22:12:59.80 I0000 00:00:1748913179.795988    1628 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+jun. 02, 2025 22:12:59.95 Created TensorFlow Lite XNNPACK delegate for CPU.
+jun. 02, 2025 22:13:00.09 [9332:12812:0602/221300.098:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 22:13:22.15 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+jun. 02, 2025 22:13:25.11 [9332:12812:0602/221325.118:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 22:14:19.87 [9332:12812:0602/221419.877:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 02, 2025 22:15:55.92 [9332:12812:0602/221555.927:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+jun. 09, 2025 19:41:26.69 NEW SESSION
+jun. 09, 2025 19:41:26.71 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+jun. 09, 2025 19:41:26.71 I0000 00:00:1749508886.696558   14280 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+jun. 09, 2025 19:41:26.99 [7420:12968:0609/194126.994:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 19:41:27.21 Created TensorFlow Lite XNNPACK delegate for CPU.
+jun. 09, 2025 19:41:27.23 [7420:13516:0609/194127.238:ERROR:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:179] Client is missing for kUser scope
+jun. 09, 2025 19:41:55.29 [7420:12968:0609/194155.297:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 19:41:57.86 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+jun. 09, 2025 19:42:43.53 [7420:12968:0609/194243.529:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 19:44:24.15 [7420:12968:0609/194424.149:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 19:48:17.68 [7420:12968:0609/194817.684:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+jun. 09, 2025 20:49:56.68 NEW SESSION
+jun. 09, 2025 20:49:56.69 [1216:780:0609/204956.679:ERROR:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:179] Client is missing for kUser scope
+jun. 09, 2025 20:49:56.76 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+jun. 09, 2025 20:49:56.77 I0000 00:00:1749512996.768968   16128 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+jun. 09, 2025 20:49:56.94 Created TensorFlow Lite XNNPACK delegate for CPU.
+jun. 09, 2025 20:49:57.02 [1216:13308:0609/204957.019:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 20:50:26.61 [1216:13308:0609/205026.613:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 20:50:27.16 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+jun. 09, 2025 20:51:25.65 [1216:13308:0609/205125.654:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 20:53:08.46 [1216:13308:0609/205308.462:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+jun. 09, 2025 20:55:58.73 [1216:13308:0609/205558.730:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT

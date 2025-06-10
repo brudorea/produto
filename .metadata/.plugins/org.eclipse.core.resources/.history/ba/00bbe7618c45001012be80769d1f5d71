@@ -1,0 +1,170 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class DAO {
+
+	/* MÓDULO DE CONEXÃO */
+	// 1) Parâmetros de conexão
+	private String driver = "com.mysql.cj.jdbc.Driver";
+	private String url = "jdbc:mysql://127.0.0.1:3306/cadastro?useTimezone=true&serverTimezone=UTC";
+	private String user = "root";
+	private String password = "";
+
+	// 2) Métodos de conexão
+	private Connection conectar() {
+		Connection con = null;
+
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, password);
+			return con;
+
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+
+	/*
+	 * // Teste de conexão com o banco de dados public void testeConexao() {
+	 * 
+	 * try { Connection con = conectar(); System.out.println(con); con.close(); }
+	 * catch (Exception e) { System.out.println(e); } }
+	 */
+
+	/* CRUD CREATE */
+	public void inserirProduto(JavaBeans produto) {
+		String create = "insert into produtos (nome, qtde, valor_unit, data_cad) values (?,?,?,?)";
+
+		try {
+			// Abrir a conexão com o banco de dados
+			Connection con = conectar();
+
+			// Preparar a query para a execução do banco de dados
+			PreparedStatement pst = con.prepareStatement(create);
+
+			// Substituir os parâmetros ???
+			pst.setString(1, produto.getNome());
+			pst.setInt(2, produto.getQtde());
+			pst.setFloat(3, produto.getValor_unit());
+			pst.setDate(4, java.sql.Date.valueOf(produto.getData_cad())); // Converter de LocalDate para java.sql.Date
+
+			// Executar a query
+			pst.executeUpdate();
+
+			// Fechar a conexão com o banco de dados
+			con.close();
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	/* CRUD READ */
+	public ArrayList<JavaBeans> listarProdutos() {
+		// Criando um objeto para acessar a classe JavaBeans
+		ArrayList<JavaBeans> produtos = new ArrayList<>();
+
+		String read = "select * from produtos order by nome";
+
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(read);
+			ResultSet rs = pst.executeQuery();
+
+			// Laço de repetição abaixo será executado enquanto houver produtos
+			while (rs.next()) {
+
+				// Variáveis de apoio que recebem os dados do banco
+				int id = rs.getInt(1);
+				String nome = rs.getString(2);
+				int qtde = rs.getInt(3);
+				float valorunit = rs.getFloat(4);
+				LocalDate data_cadastro = rs.getDate("data_cad").toLocalDate();
+
+				// Populando o ArrayList
+				produtos.add(new JavaBeans(id, nome, qtde, valorunit, data_cadastro));
+			}
+
+			con.close();
+			return produtos;
+
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+
+	/** CRUD - Update */
+	public void selecionarProduto(JavaBeans produto) {
+		String read2 = "select * from produtos where id = ?";
+
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(read2);
+			pst.setInt(1, produto.getId());
+			ResultSet rs = pst.executeQuery();
+
+			while (rs.next()) {
+				// Setar variável JavaBeans
+				produto.setId(rs.getInt(1));
+				produto.setNome(rs.getString(2));
+				produto.setQtde(rs.getInt(3));
+				produto.setValor_unit(rs.getFloat(4));
+				produto.setData_cad(rs.getDate(5).toLocalDate());
+			}
+
+			con.close();
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	// Editar produto
+	public void alterarProduto(JavaBeans produto) {
+		String updateProduto = "update produtos set nome=?,qtde=?,valor_unit=?,data_cad=? where id=?";
+
+		try {
+
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(updateProduto);
+
+			pst.setString(1, produto.getNome());
+			pst.setInt(2, produto.getQtde());
+			pst.setFloat(3, produto.getValor_unit());
+			pst.setDate(4, java.sql.Date.valueOf(produto.getData_cad())); // converter de LocalDate para SQL Date
+			pst.setInt(5, produto.getId());
+			pst.executeUpdate();
+			con.close();
+			
+		} catch (Exception e) {
+			System.out.println("Erro ao atualizar produto: " + e.getMessage());
+		}
+
+	}
+	
+	/** CRUD DELETE */
+	public void deletarProduto(JavaBeans produto) {
+		String delete = "delete from produtos where id=?";
+		
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(delete);
+			pst.setInt(1, produto.getId());
+			
+			pst.executeUpdate();
+			con.close();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+}
